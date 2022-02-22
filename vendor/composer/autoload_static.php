@@ -526,6 +526,13 @@ class ComposerStaticInit5ff9eb5ac14de05f786cca5b7aa786a3
     );
 
     public static $prefixesPsr0 = array (
+        'O' => 
+        array (
+            'Orangehill\\Iseed' => 
+            array (
+                0 => __DIR__ . '/..' . '/orangehill/iseed/src',
+            ),
+        ),
         'M' => 
         array (
             'Mockery' => 
@@ -536,6 +543,10 @@ class ComposerStaticInit5ff9eb5ac14de05f786cca5b7aa786a3
     );
 
     public static $classMap = array (
+        'App\\Admin\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/Admin/Controllers/AuthController.php',
+        'App\\Admin\\Controllers\\ExampleController' => __DIR__ . '/../..' . '/app/Admin/Controllers/ExampleController.php',
+        'App\\Admin\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Admin/Controllers/HomeController.php',
+        'App\\Admin\\Controllers\\IngredientsController' => __DIR__ . '/../..' . '/app/Admin/Controllers/IngredientsController.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
@@ -548,6 +559,9 @@ class ComposerStaticInit5ff9eb5ac14de05f786cca5b7aa786a3
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Models\\Ingredients' => __DIR__ . '/../..' . '/app/Models/Ingredients.php',
+        'App\\Models\\Ingredients_Category' => __DIR__ . '/../..' . '/app/Models/Ingredients_Category.php',
+        'App\\Models\\Ingredients_Price' => __DIR__ . '/../..' . '/app/Models/Ingredients_Price.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
@@ -661,6 +675,9 @@ class ComposerStaticInit5ff9eb5ac14de05f786cca5b7aa786a3
         'Cron\\MonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
+        'Database\\Seeders\\IngredientsCategoryTableSeeder' => __DIR__ . '/../..' . '/database/seeders/IngredientsCategoryTableSeeder.php',
+        'Database\\Seeders\\IngredientsPriceTableSeeder' => __DIR__ . '/../..' . '/database/seeders/IngredientsPriceTableSeeder.php',
+        'Database\\Seeders\\IngredientsTableSeeder' => __DIR__ . '/../..' . '/database/seeders/IngredientsTableSeeder.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
         'DeepCopy\\Exception\\CloneException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
         'DeepCopy\\Exception\\PropertyException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/PropertyException.php',
@@ -3869,6 +3886,11 @@ class ComposerStaticInit5ff9eb5ac14de05f786cca5b7aa786a3
         'NunoMaduro\\Collision\\Provider' => __DIR__ . '/..' . '/nunomaduro/collision/src/Provider.php',
         'NunoMaduro\\Collision\\SolutionsRepositories\\NullSolutionsRepository' => __DIR__ . '/..' . '/nunomaduro/collision/src/SolutionsRepositories/NullSolutionsRepository.php',
         'NunoMaduro\\Collision\\Writer' => __DIR__ . '/..' . '/nunomaduro/collision/src/Writer.php',
+        'Orangehill\\Iseed\\Facades\\Iseed' => __DIR__ . '/..' . '/orangehill/iseed/src/Orangehill/Iseed/Facades/Iseed.php',
+        'Orangehill\\Iseed\\Iseed' => __DIR__ . '/..' . '/orangehill/iseed/src/Orangehill/Iseed/Iseed.php',
+        'Orangehill\\Iseed\\IseedCommand' => __DIR__ . '/..' . '/orangehill/iseed/src/Orangehill/Iseed/IseedCommand.php',
+        'Orangehill\\Iseed\\IseedServiceProvider' => __DIR__ . '/..' . '/orangehill/iseed/src/Orangehill/Iseed/IseedServiceProvider.php',
+        'Orangehill\\Iseed\\TableNotFoundException' => __DIR__ . '/..' . '/orangehill/iseed/src/Orangehill/Iseed/Exceptions.php',
         'PHPUnit\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit\\Framework\\ActualValueIsNotAnObjectException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Exception/ActualValueIsNotAnObjectException.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert.php',
