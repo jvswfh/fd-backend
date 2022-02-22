@@ -547,6 +547,7 @@ class ComposerStaticInit5ff9eb5ac14de05f786cca5b7aa786a3
         'App\\Admin\\Controllers\\ExampleController' => __DIR__ . '/../..' . '/app/Admin/Controllers/ExampleController.php',
         'App\\Admin\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Admin/Controllers/HomeController.php',
         'App\\Admin\\Controllers\\IngredientsController' => __DIR__ . '/../..' . '/app/Admin/Controllers/IngredientsController.php',
+        'App\\Admin\\Controllers\\IngredientsPriceController' => __DIR__ . '/../..' . '/app/Admin/Controllers/IngredientsPriceController.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',

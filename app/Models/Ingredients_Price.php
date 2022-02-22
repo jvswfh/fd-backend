@@ -14,4 +14,9 @@ class Ingredients_Price extends Model
         return $this->belongsTo(Ingredients::class,'ing_id');
     }
 
+    public function ingredients_category()
+    {
+        return $this->belongsTo(Ingredients_Category::class,'Ingredients.category_id');
+    }
+
 }

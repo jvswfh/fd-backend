@@ -10,6 +10,7 @@ return array(
     'App\\Admin\\Controllers\\ExampleController' => $baseDir . '/app/Admin/Controllers/ExampleController.php',
     'App\\Admin\\Controllers\\HomeController' => $baseDir . '/app/Admin/Controllers/HomeController.php',
     'App\\Admin\\Controllers\\IngredientsController' => $baseDir . '/app/Admin/Controllers/IngredientsController.php',
+    'App\\Admin\\Controllers\\IngredientsPriceController' => $baseDir . '/app/Admin/Controllers/IngredientsPriceController.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
