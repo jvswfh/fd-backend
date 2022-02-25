@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a4ecc1d7bf671e0209caef79728a1309",
+    "content-hash": "40be791fd93fa2ae45b5024ea756c8aa",
     "packages": [
         {
             "name": "brick/math",
@@ -1390,6 +1390,64 @@
                 }
             ],
             "time": "2021-10-06T17:43:30+00:00"
+        },
+        {
+            "name": "laravel-admin-ext/api-tester",
+            "version": "v1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel-admin-extensions/api-tester.git",
+                "reference": "ef8501aa339b988d59ac76d57581f0613e753ffe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel-admin-extensions/api-tester/zipball/ef8501aa339b988d59ac76d57581f0613e753ffe",
+                "reference": "ef8501aa339b988d59ac76d57581f0613e753ffe",
+                "shasum": ""
+            },
+            "require": {
+                "encore/laravel-admin": ">=1.5",
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "laravel/laravel": "~5.5",
+                "phpunit/phpunit": "~6.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Encore\\Admin\\ApiTester\\ApiTesterServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Encore\\Admin\\ApiTester\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "z-song",
+                    "email": "zosong@126.com"
+                }
+            ],
+            "description": "Api tester for laravel",
+            "homepage": "https://github.com/laravel-admin-extensions/api-tester",
+            "keywords": [
+                "api",
+                "laravel-admin",
+                "tester"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel-admin-extensions/api-tester/issues",
+                "source": "https://github.com/laravel-admin-extensions/api-tester/tree/v1.0.4"
+            },
+            "time": "2020-09-11T04:45:51+00:00"
         },
         {
             "name": "laravel/framework",

@@ -29,9 +29,9 @@ class ComposerStaticInit5ff9eb5ac14de05f786cca5b7aa786a3
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
         '3bd81c9b8fcc150b69d8b63b4d2ccf23' => __DIR__ . '/..' . '/spatie/flare-client-php/src/helpers.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
+        '4e8671d7be9056dcd04ddd9e8e15f9cc' => __DIR__ . '/..' . '/encore/laravel-admin/src/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
-        '4e8671d7be9056dcd04ddd9e8e15f9cc' => __DIR__ . '/..' . '/encore/laravel-admin/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -143,6 +143,7 @@ class ComposerStaticInit5ff9eb5ac14de05f786cca5b7aa786a3
         ),
         'E' => 
         array (
+            'Encore\\Admin\\ApiTester\\' => 23,
             'Encore\\Admin\\' => 13,
             'Egulias\\EmailValidator\\' => 23,
         ),
@@ -450,6 +451,10 @@ class ComposerStaticInit5ff9eb5ac14de05f786cca5b7aa786a3
         'Facade\\IgnitionContracts\\' => 
         array (
             0 => __DIR__ . '/..' . '/facade/ignition-contracts/src',
+        ),
+        'Encore\\Admin\\ApiTester\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel-admin-ext/api-tester/src',
         ),
         'Encore\\Admin\\' => 
         array (
@@ -1223,6 +1228,11 @@ class ComposerStaticInit5ff9eb5ac14de05f786cca5b7aa786a3
         'Encore\\Admin\\Actions\\Toastr' => __DIR__ . '/..' . '/encore/laravel-admin/src/Actions/Toastr.php',
         'Encore\\Admin\\Admin' => __DIR__ . '/..' . '/encore/laravel-admin/src/Admin.php',
         'Encore\\Admin\\AdminServiceProvider' => __DIR__ . '/..' . '/encore/laravel-admin/src/AdminServiceProvider.php',
+        'Encore\\Admin\\ApiTester\\ApiLogger' => __DIR__ . '/..' . '/laravel-admin-ext/api-tester/src/ApiLogger.php',
+        'Encore\\Admin\\ApiTester\\ApiTester' => __DIR__ . '/..' . '/laravel-admin-ext/api-tester/src/ApiTester.php',
+        'Encore\\Admin\\ApiTester\\ApiTesterController' => __DIR__ . '/..' . '/laravel-admin-ext/api-tester/src/ApiTesterController.php',
+        'Encore\\Admin\\ApiTester\\ApiTesterServiceProvider' => __DIR__ . '/..' . '/laravel-admin-ext/api-tester/src/ApiTesterServiceProvider.php',
+        'Encore\\Admin\\ApiTester\\BootExtension' => __DIR__ . '/..' . '/laravel-admin-ext/api-tester/src/BootExtension.php',
         'Encore\\Admin\\Auth\\Database\\AdminTablesSeeder' => __DIR__ . '/..' . '/encore/laravel-admin/src/Auth/Database/AdminTablesSeeder.php',
         'Encore\\Admin\\Auth\\Database\\Administrator' => __DIR__ . '/..' . '/encore/laravel-admin/src/Auth/Database/Administrator.php',
         'Encore\\Admin\\Auth\\Database\\HasPermissions' => __DIR__ . '/..' . '/encore/laravel-admin/src/Auth/Database/HasPermissions.php',

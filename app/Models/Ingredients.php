@@ -22,5 +22,10 @@ class Ingredients extends Model
     {
         return $this->hasOne(Ingredients_Price::class,'ing_id')->orderBy('createdate', 'desc');
     }
+
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
+    }
    
 }

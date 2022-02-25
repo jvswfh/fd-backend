@@ -67,7 +67,10 @@ class IngredientsPriceController extends AdminController
 
         //$options = DB::table('ingredients')->select('id','name as text')->get();
 
-        $form->select('ing_id','食材')->options([1 => 'foo', 2 => 'bar', 3 => 'Option name']);
+
+        $form->select('ing_id')->options('/api/users');
+
+        //$form->select('ing_id','食材')->options([1 => 'foo', 2 => 'bar', 3 => 'Option name']);
         //$form->number('ing_id', __('Ing id'));
         $form->decimal('price', __('Price'));
         $form->datetime('createdate', __('Createdate'))->default(date('Y-m-d H:i:s'))->readonly();

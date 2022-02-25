@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '648869fd8fec285fac500719e012caceda4bb768',
+        'reference' => 'd1337c203659841d08fdbc6fc2092f9ad4aa6e55',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -418,6 +418,15 @@
                 0 => '*',
             ),
         ),
+        'laravel-admin-ext/api-tester' => array(
+            'pretty_version' => 'v1.0.4',
+            'version' => '1.0.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laravel-admin-ext/api-tester',
+            'aliases' => array(),
+            'reference' => 'ef8501aa339b988d59ac76d57581f0613e753ffe',
+            'dev_requirement' => false,
+        ),
         'laravel/framework' => array(
             'pretty_version' => 'v9.1.0',
             'version' => '9.1.0.0',
@@ -433,7 +442,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '648869fd8fec285fac500719e012caceda4bb768',
+            'reference' => 'd1337c203659841d08fdbc6fc2092f9ad4aa6e55',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
