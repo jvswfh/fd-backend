@@ -5,7 +5,9 @@ namespace App\Admin\Controllers;
 use App\Models\Ingredients;
 use App\Models\Ingredients_Price;
 use Encore\Admin\Controllers\AdminController;
+use Encore\Admin\Form;
 use Encore\Admin\Grid;
+use Encore\Admin\Show;
 
 class IngredientsController extends AdminController
 {
@@ -38,6 +40,37 @@ class IngredientsController extends AdminController
 
 
         return $grid;
+    }
+
+
+    /**
+     * Make a form builder.
+     *
+     * @return Form
+     */
+    protected function form()
+    {
+        $form = new Form(new Ingredients());
+
+
+        //$form->select('ing_id')->options('/api/users');
+
+        $form->select('category_id','食材種類')->options([1 => 'foo', 2 => 'bar', 3 => 'Option name']);
+        $form->text('name', __('食材名稱'));
+
+        $form->tools(function (Form\Tools $tools) {
+
+            // 去掉`删除`按钮
+            $tools->disableDelete();
+
+            // 去掉`查看`按钮
+            $tools->disableView();
+
+        });
+
+
+
+        return $form;
     }
 
 }
