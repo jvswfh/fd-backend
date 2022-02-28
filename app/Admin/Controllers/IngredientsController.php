@@ -32,9 +32,12 @@ class IngredientsController extends AdminController
         //var_dump($last_price);
         //exit();
 
-        $grid->column('price', '最新報價')->display(function () {
-            return Ingredients::find(1)->last_price->price;
-        });
+        // 如果你已經在model(Ingredients.php)設定好一對一關聯就可直接這樣用
+        $grid->column('last_price.price', __('最新報價'));
+        
+        // $grid->column('price', '最新報價')->display(function () {
+        //     return Ingredients::find(1)->last_price->price;
+        // });
 
 
         return $grid;

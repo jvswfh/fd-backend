@@ -30,7 +30,12 @@ class IngredientsPriceController extends AdminController
         //$grid->column('id', __('Id'));
         //$grid->column('ing_id', __('Ing id'));
         
-        $grid->column('ingredients_category.name', __('種類')); 
+        // $grid->column('ingredients_category.name', __('種類')); 
+
+        // laravel admin 無法做多層直接指定，所以透過display來抓取多層
+        $grid->column('price', '種類')->display(function () {
+            return $this->ingredients->ingredients_category->name;
+        });
         $grid->column('ingredients.name', __('食材名稱')); 
         $grid->column('price', __('Price'));
         $grid->column('createdate', __('Createdate'));
@@ -65,10 +70,14 @@ class IngredientsPriceController extends AdminController
     {
         $form = new Form(new Ingredients_Price());
 
-        //$options = DB::table('ingredients')->select('id','name as text')->get();
+        $options = DB::table('ingredients')->select('id','name as text')->get();
+        // 轉換成key value array
+        $options = $options->pluck('text','id');
+        // dd($options); 你可以看一下轉換後的結構
+        $form->select('ing_id')->options($options);
 
-
-        $form->select('ing_id')->options('/api/users');
+        // 這個寫法是透過ajax載入下來清單
+        // $form->select('ing_id')->options('/api/users');
 
         //$form->select('ing_id','食材')->options([1 => 'foo', 2 => 'bar', 3 => 'Option name']);
         //$form->number('ing_id', __('Ing id'));
