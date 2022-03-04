@@ -26,15 +26,23 @@ class IngredientsPriceController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new Ingredients_Price());
+        $grid->model()->orderBy('created_at', 'desc');
 
         //$grid->column('id', __('Id'));
         //$grid->column('ing_id', __('Ing id'));
         
-        $grid->column('ingredients_category.name', __('種類')); 
-        $grid->column('ingredients.name', __('食材名稱')); 
-        $grid->column('price', __('Price'));
-        $grid->column('createdate', __('Createdate'));
+        // $grid->column('ingredients_category.name', __('種類')); 
 
+        // laravel admin 無法做多層直接指定，所以透過display來抓取多層
+        $grid->column('category_name', '種類')->display(function () {
+            return $this->ingredients->ingredients_category->name;
+        });
+        $grid->column('ingredients.name', __('食材名稱')); 
+        $grid->column('price', __('價格'))->editable();
+        $grid->column('created_at', __('建立時間'))->date('Y-m-d H:i:s');
+
+        // 全部关闭
+        $grid->disableActions();
         return $grid;
     }
 
@@ -50,7 +58,7 @@ class IngredientsPriceController extends AdminController
 
         $show->field('id', __('Id'));
         $show->field('ing_id', __('Ing id'));
-        $show->field('price', __('Price'));
+        $show->field('price', __('價格'));
         //$show->field('createdate', __('Createdate'));
 
         return $show;
@@ -65,15 +73,31 @@ class IngredientsPriceController extends AdminController
     {
         $form = new Form(new Ingredients_Price());
 
-        //$options = DB::table('ingredients')->select('id','name as text')->get();
+        $options = DB::table('ingredients')->select('id','name as text')->get();
 
+        //dd($options); //你可以看一下轉換後的結構
 
-        $form->select('ing_id')->options('/api/users');
+        // 轉換成key value array
+        // https://laravel.tw/docs/5.2/collections  集合function
+        $options = $options->pluck('text','id');
+        //dd($options); //你可以看一下轉換後的結構
+        //$form->select('ing_id', __('食材'))->options($options);
+
+        //dd($form->isEditing());
+        if($form->isEditing()){
+            $form->select('ing_id', __('食材'))->options($options)->readonly();
+        }
+        else{
+            $form->select('ing_id', __('食材'))->options($options);
+        }
+
+        // 這個寫法是透過ajax載入下來清單
+        // $form->select('ing_id')->options('/api/users');
 
         //$form->select('ing_id','食材')->options([1 => 'foo', 2 => 'bar', 3 => 'Option name']);
         //$form->number('ing_id', __('Ing id'));
-        $form->decimal('price', __('Price'));
-        $form->datetime('createdate', __('Createdate'))->default(date('Y-m-d H:i:s'))->readonly();
+        $form->decimal('price', __('價格'));
+        //$form->datetime('created_at', __('建立時間'))->default(date('Y-m-d H:i:s'))->readonly();
 
 
         $form->tools(function (Form\Tools $tools) {

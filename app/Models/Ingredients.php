@@ -20,7 +20,7 @@ class Ingredients extends Model
 
     public function last_price()
     {
-        return $this->hasOne(Ingredients_Price::class,'ing_id')->orderBy('createdate', 'desc');
+        return $this->hasOne(Ingredients_Price::class,'ing_id')->orderBy('created_at', 'desc');
     }
 
     public function tags()
